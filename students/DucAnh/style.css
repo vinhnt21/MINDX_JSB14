@@ -1,0 +1,12 @@
+
+div {
+font-family: 'Courier New', Courier, monospace;
+margin: 10px;
+padding: 10px;
+border: 2px dashed #000000;
+border-radius: 15px;
+background: linear-gradient(to top,  #838cff, #00eeff);
+}
+body {
+  background-color: rgb(208, 243, 255);
+}
