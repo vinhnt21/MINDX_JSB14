@@ -1,0 +1,66 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+}
+.navbar__link {
+  list-style: none;
+  margin: 55px;
+}
+.navbar__link a {
+  text-decoration: none; /*xóa đường viền dưới mỗi chữ*/
+  color: #145d09;
+  font-weight: 300;
+}
+
+ 
+@media (min-width: 62em) {
+  /* chọn độ phân giải cho màn hình và style element theo chế độ đó*/
+  .navbar__links {
+    position: initial;
+    opacity: 1;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#banner {
+  position: relative;
+  height: 100vh; /* view height lệ thuộc vào chiều cao của màn hình thiết bị*/
+  display: flex;
+  align-items: center;
+}
+.banner__heading {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.banner__heading h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.8em;
+}
+
+.banner__heading p {
+  font-weight: 300;
+  line-height: 2em; /* khoảng cách dòng*/
+  margin-bottom: 1.5em;
+}
+
+ 

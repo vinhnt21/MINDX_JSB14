@@ -5,10 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      #menu {
+        position: fixed;
+        background-color: gray;
+        color: white;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+      #content {
+        margin-top: 100px;
+      }
+      li:hover {
+        color: red;
+      }
+    </style>
   </head>
   <body>
-    <h1>Chào mừng đến với trang web cá nhân</h1>
-    <img src="photo-1-1539960492660791551744.png" alt="" />
+    <div>
+      <ul id="menu">
+        <li>Thông tin cá nhân</li>
+        <li>Sở thích</li>
+        <li>Mục tiêu</li>
+        <li>Bài hát yêu thích</li>
+      </ul>
+    </div>
+    <div id="content"></div>
+    <h1>Chào mừng đến với trang web cá nhân của tôi</h1>
+    <img src="avt.png" alt="" />
     <div>
       <h2>Thông tin cá nhân</h2>
       <ul>

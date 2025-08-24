@@ -6,6 +6,17 @@
     <title>Thông tin</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+      #menu {
+        position: fixed;
+        background: black;
+        color: rgb(250, 8, 8);
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      #content {
+        margin-top: 100px;
+      }
       div {
         background: linear-gradient(
           135deg,
@@ -20,41 +31,53 @@
     </style>
   </head>
   <body>
-    <p style="text-align: center">
-      <img
-        src="data:image/png;base64,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"
-        alt=""
-        width="350"
-      />
-    </p>
-    <h1 style="text-align: center">Welcome to my personality interview</h1>
+    <div id="menu">
+      <ul>
+        <li>Thông tin cá nhân</li>
+        <li>Sở thích</li>
+        <li>Mục tiêu</li>
+        <li>Thành tựu trong game</li>
+      </ul>
+    </div>
 
-    <div>
-      <h2>Thông tin cá nhân</h2>
-      <ul>
-        <li>Tên: Nguyễn Chí Khải</li>
-        <li>15 tuổi</li>
-      </ul>
-    </div>
-    <div>
-      <h2>Sở thích</h2>
-      <ul>
-        <li>Chơi game</li>
-        <li>Ngủ</li>
-      </ul>
-    </div>
-    <div>
-      <h2>Mục tiêu</h2>
-      <ul>
-        <li>Ngủ đủ 8h</li>
-        <li>Thoát rank tinh anh</li>
-      </ul>
-    </div>
-    <div>
-      <h2>Thành tựu trong game</h2>
-      <ol>
-        <li>Có kitsune vv</li>
-      </ol>
+    <div id="content">
+      <p style="text-align: center">
+        <img
+          src="data:image/png;base64,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"
+          alt=""
+          width="350"
+        />
+      </p>
+      <h1 style="text-align: center">Welcome to my personality interview</h1>
+
+      <div>
+        <h2>Thông tin cá nhân</h2>
+        <ul>
+          <li>Tên: Nguyễn Chí Khải</li>
+          <li>15 tuổi</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Sở thích</h2>
+        <ul>
+          <li>Chơi game</li>
+          <li>Ngủ</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Mục tiêu</h2>
+        <ul>
+          <li>Ngủ đủ 8h</li>
+          <li>Thoát rank tinh anh</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Thành tựu trong game</h2>
+        <ol>
+          <li>Có kitsune vv</li>
+          <li>Gác cổng Tinh Anh</li>
+        </ol>
+      </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS5</title>
+    <!-- Code minh họa CSS display -->
+    <style>
+        .block {
+            display: block;
+            margin: 10px 0;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        .inline {
+            display: inline;
+            margin: 10px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            margin: 10px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        .none {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Code HTML minh họa CSS display -->
+    <h2>display: block;</h2>
+    <div class="block">This is a block element</div>
+
+    <h2>display: inline;</h2>
+    <span class="inline">This is an</span> <span class="inline">inline element</span>
+
+    <h2>display: inline-block;</h2>
+    <span class="inline-block">This is an</span> <span class="inline-block">inline-block element</span>
+
+    <h2>display: none;</h2>
+    <div class="none">This element will not be displayed</div>
+
+
+    <!-- Code minh họa về cách sử dụng media query -->
+    <style>
+        /* CSS cho màn hình máy tính để bàn  */
+        body {
+            background-color: lightblue;
+        }
+
+        /* CSS cho màn hình tablet */
+        @media (max-width: 768px) {
+            body {
+                background-color: coral;
+            }
+        }
+
+        /* CSS cho màn hình điện thoại di động */
+        @media (max-width: 480px) {
+            body {
+                background-color: lightgreen;
+            }
+        }
+    </style>
+
+    <!-- Code minh họa về flexbox -->
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: DodgerBlue;
+        }
+
+        .flex-container > div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+    <h1>Flexbox Example</h1>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+    </div>
+
+</body>
+
+</html>
