@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang công thức nấu ăn</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      .card-img-top {
+        height: 200px; /* vẫn cố định chiều cao */
+        object-fit: cover; /* cắt ảnh thay vì kéo giãn */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Trang công thức nấu ăn</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About_us.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+
+          <!-- Thanh tìm kiếm -->
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Phần công thức nấu ăn của tháng -->
+    <div class="container mt-4">
+      <h1 class="mb-4 text-center">Công thức nấu ăn của tháng</h1>
+      <div id="recipes">
+        <div class="row justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/Garlic-Noodles-with-Crab-FT-RECIPE1223-39b040442925468bb2df6b25a8cb7884.jpg"
+                class="card-img-top"
+                alt="Pasta cua và bơ tỏi"
+                height="200px"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Pasta cua và bơ tỏi</h5>
+                <a href="Pasta_cua_botoi.html" class="btn btn-danger">Nấu</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/MSL-1511079-pumpkin-pie-hero-3x2-11511-c9c4b6f36f6544578ea9166ae998b1af.jpeg"
+                class="card-img-top"
+                alt="Bánh bí ngô"
+                height="200px"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Bánh bí ngô</h5>
+                <a href="pumkin_pie.html" class="btn btn-danger">Nấu</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/step_5_soup.webp"
+                class="card-img-top"
+                alt="Súp gà"
+                height="200px"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Súp gà</h5>
+                <a href="chicken_soup.html" class="btn btn-danger">Nấu</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phần món nhậu -->
+    <div class="container mt-4">
+      <h1 class="mb-4 text-center">Món nhậu</h1>
+      <div id="recipes_snack_1">
+        <div class="row justify-content-center">
+          <!-- Cá lóc nướng trui -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/ca_loc.png"
+                class="card-img-top"
+                alt="Cá lóc nướng trui"
+                height="200"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Cá lóc nướng trui</h5>
+                <a href="ca_loc_nuong_trui.html" class="btn btn-danger">Nấu</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bạch tuộc nướng sa tế -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/bach_touc.png"
+                class="card-img-top"
+                alt="Bạch tuộc nướng sa tế"
+                height="200"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Bạch tuộc nướng sa tế</h5>
+                <a href="bach_touc_sate.html" class="btn btn-danger">Nấu</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cánh gà chiên nước mắm -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/canh_ga.jpg"
+                class="card-img-top"
+                alt="Cánh gà chiên nước mắm"
+                height="200px"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Cánh gà chiên nước mắm</h5>
+                <a href="canh_ga_chien.html" class="btn btn-danger">Nấu</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Món nhậu phần 2 -->
+      <div id="recipes_snack_2" class="mt-4">
+        <div class="row justify-content-center">
+          <!-- Hàu nướng mỡ hành -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/Thnhphm11-1669194250-3845-1669194272.webp"
+                class="card-img-top"
+                alt="Hàu nướng mỡ hành"
+                height="200px"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Hàu nướng mỡ hành</h5>
+                <a href="Hau_nuong.html" class="btn btn-danger">Nấu</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mực nướng sa tế -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/muc_nuong.jpg"
+                class="card-img-top"
+                alt="Mực nướng sa tế"
+                height="200px"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Mực nướng sa tế</h5>
+                <a href="muc_nuong.html" class="btn btn-danger">Nấu</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dồi sụn nướng -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/sun_nuong.jpg"
+                class="card-img-top"
+                alt="Dồi sụn nướng"
+                height="200px"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Dồi sụn nướng</h5>
+                <a href="Sun_nuong.html" class="btn btn-danger">Nấu</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phần món tráng miệng -->
+    <div class="container mt-4 mb-5">
+      <h1 class="mb-4 text-center">Công thức món tráng miệng</h1>
+      <h2 class="mb-4 text-center">Công thức liên quan đến chanh</h2>
+      <div id="desserts">
+        <div class="row justify-content-center">
+          <!-- Bánh bí ngô -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/Lime_pie.webp"
+                class="card-img-top"
+                alt="Bánh chanh xanh"
+                height="200px"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Bánh chanh xanh</h5>
+                <a href="Banh_chanh_xanh.html" class="btn btn-danger">Nấu</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="images/lemon_pie.webp"
+                class="card-img-top"
+                alt="Bánh tart chanh vàng"
+                height="200px"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Tart chanh vàng</h5>
+                <a href="tart_lemon.html" class="btn btn-danger">Nấu</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-4 pb-3 mt-5">
+    <div class="container text-center text-md-start">
+      <div class="row">
+        <!-- Cột 1: Giới thiệu -->
+        <div class="col-md-4 mb-3">
+          <h5>Về chúng tôi</h5>
+          <p>
+            Trang công thức nấu ăn giúp bạn khám phá hàng trăm món ngon mỗi
+            ngày. Chúng tôi chia sẻ bí quyết nấu ăn dễ hiểu, nguyên liệu dễ tìm
+            và hương vị tuyệt vời!
+          </p>
+        </div>
+
+        <!-- Cột 2: Liên kết nhanh -->
+        <div class="col-md-4 mb-3">
+          <h5>Liên kết nhanh</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-white text-decoration-none">Trang chủ</a>
+            </li>
+            <li>
+              <a href="About_us.html" class="text-white text-decoration-none"
+                >Về chúng tôi</a
+              >
+            </li>
+            <li>
+              <a href="#recipes" class="text-white text-decoration-none"
+                >Công thức nổi bật</a
+              >
+            </li>
+            <li>
+              <a href="#desserts" class="text-white text-decoration-none"
+                >Tráng miệng</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Liên hệ -->
+        <div class="col-md-4 mb-3">
+          <h5>Liên hệ</h5>
+          <p class="mb-1">
+            <i class="bi bi-envelope"></i> Email: ngovankhoinguyen2013@gmail.com
+          </p>
+          <p class="mb-1">
+            <i class="bi bi-telephone"></i> Hotline: 6969 696 696
+          </p>
+          <p><i class="bi bi-geo-alt"></i> Địa chỉ: Quận 1, TP. Hồ Chí Minh</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dòng bản quyền -->
+    <div class="text-center mt-3 border-top pt-3">
+      © 2025 Trang công thức nấu ăn | Thiết kế bởi <strong>Ngố Nguyên</strong>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+</html>

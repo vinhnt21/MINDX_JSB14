@@ -1,0 +1,15 @@
+#back {
+  color: white !important;
+}
+
+#step_sun {
+  width: 500px;
+}
+
+.detail_sun {
+  margin-top: 25px;
+}
+
+.sun_steps {
+  height: 300px;
+}

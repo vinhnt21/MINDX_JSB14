@@ -1,0 +1,15 @@
+#back {
+  color: white !important;
+}
+
+#step_muc {
+  width: 500px;
+}
+
+.detail_muc {
+  margin-top: 25px;
+}
+
+.muc_steps {
+  height: 300px;
+}

@@ -1,0 +1,15 @@
+#back {
+  color: white !important;
+}
+
+#step_fish {
+  width: 500px;
+}
+
+.fish_detail {
+  margin-top: 25px;
+}
+
+.fish_steps {
+  height: 300px;
+}
