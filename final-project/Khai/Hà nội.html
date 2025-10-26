@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu Hà Nội</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* ================== HIỆU ỨNG CSS ================== */
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #9dd4ff;
+        animation: fadeIn 1s ease-in;
+      }
+
+      /* MENU */
+      #menu {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: linear-gradient(90deg, #ff8892, #3ffcec);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      #menu ul li {
+        transition: transform 0.3s, color 0.3s;
+        cursor: pointer;
+      }
+
+      #menu ul li:hover {
+        color: #ffe066;
+        transform: scale(1.1);
+      }
+
+      /* ẢNH VÀ KHUNG */
+      img {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      /* NÚT BẤM */
+      button {
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      }
+
+      /* HIỆU ỨNG XUẤT HIỆN */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* KHUNG CHỨA */
+      #content {
+        animation: fadeIn 1.2s ease-in-out;
+      }
+
+      /* FOOTER */
+      #footer {
+        background: linear-gradient(90deg, #fceabb, #f8b500);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- MENU -->
+    <div id="menu" class="text-white p-3">
+      <h1 class="text-center fw-bold">Giới thiệu Thủ đô Hà Nội</h1>
+      <ul class="d-flex justify-content-center gap-4 list-unstyled mt-3 fs-5">
+        <li><a href="Hà nội.html">Trang chủ</a></li>
+        <li><a href="Địa danh.html">Địa danh</a></li>
+        <li><a href="Ẩm thực.html"> Ẩm thực</a></li>
+        <li>
+          <a
+            href="https://dulichhanoi.vn/?utm_source=https%3A%2F%2Fwww.google.com%2F"
+            target="_blank"
+            >Liên hệ</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <div id="content" class="d-flex flex-column align-items-center p-4">
+      <h2 class="text-primary fw-bold mb-3">Hà Nội - Trái tim của Việt Nam</h2>
+
+      <img
+        src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/07/pho-co-ha-noi-1.jpg"
+        alt="Hình ảnh Hà Nội"
+        width="380"
+        class="rounded-4 shadow mb-4"
+      />
+
+      <p class="text-center fs-5 text-secondary w-75">
+        Hà Nội - thủ đô ngàn năm văn hiến, là trung tâm chính trị, văn hóa và
+        kinh tế của Việt Nam. Với vẻ đẹp cổ kính hòa quyện cùng nét hiện đại, Hà
+        Nội để lại trong lòng du khách những ấn tượng sâu sắc về con người thân
+        thiện, món ăn đặc trưng và cảnh quan nên thơ.
+      </p>
+
+      <div class="container mt-4">
+        <div class="row text-center">
+          <!-- ĐỊA DANH -->
+          <div class="col-12 col-md-6 text-success-emphasis mb-4">
+            <h4 class="fw-bold text-success">Những điểm nổi bật</h4>
+            <ul class="text-info-emphasis list-unstyled fs-5">
+              <li>🌸 Hồ Hoàn Kiếm và Tháp Rùa</li>
+              <li>🏮 Phố cổ Hà Nội với 36 phố phường</li>
+              <li>📜 Văn Miếu - Quốc Tử Giám</li>
+              <li>🏛️ Lăng Chủ tịch Hồ Chí Minh</li>
+            </ul>
+          </div>
+
+          <!-- KHÁM PHÁ -->
+          <div class="col-12 col-md-6 mb-4">
+            <h4 class="text-danger fw-bold">Khám phá ngay</h4>
+            <p class="fs-5">
+              Đến Hà Nội để cảm nhận vẻ đẹp văn hóa và lịch sử Việt Nam!
+            </p>
+            <a
+              href="https://vietnamtourism.gov.vn/printer/59009?type=1"
+              target="_blank"
+            >
+              <button class="btn btn-primary px-4 py-2">Tìm hiểu thêm</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer" class="text-primary p-4 mt-4 text-center">
+      © 2025 - Nguyễn Chí Khải | Trang giới thiệu Hà Nội
+    </div>
+  </body>
+</html>

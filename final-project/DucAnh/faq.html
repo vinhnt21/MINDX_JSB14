@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DCK AIO - Câu Hỏi Thường Gặp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      :root {
+        --primary-color: #6c5ce7;
+        --secondary-color: #a29bfe;
+        --dark-color: #2d3436;
+        --light-color: #f5f6fa;
+        --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      }
+      
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--dark-color);
+        background-color: var(--light-color);
+        line-height: 1.6;
+      }
+      
+      .navbar {
+        background: var(--gradient) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .navbar-brand, .nav-link {
+        color: white !important;
+        font-weight: 600;
+      }
+      
+      .nav-link:hover {
+        color: var(--light-color) !important;
+        text-decoration: underline;
+      }
+      
+      .hero-section {
+        background: var(--gradient);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      
+      .hero-section h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      
+      .section-title {
+        margin-bottom: 30px;
+        position: relative;
+        padding-bottom: 15px;
+      }
+      
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        height: 4px;
+        background: var(--gradient);
+        border-radius: 2px;
+      }
+      
+      .card {
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        border: none;
+        transition: transform 0.3s ease;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      
+      .card-header {
+        background: white;
+        border-bottom: 1px solid #e9ecef;
+        border-radius: 10px 10px 0 0 !important;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 20px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .card-header:hover {
+        background-color: #f8f9fa;
+      }
+      
+      .card-header h5 {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .card-header .fa-chevron-down {
+        transition: transform 0.3s ease;
+        color: var(--primary-color);
+      }
+      
+      .card-header.collapsed .fa-chevron-down {
+        transform: rotate(0deg);
+      }
+      
+      .card-header:not(.collapsed) .fa-chevron-down {
+        transform: rotate(180deg);
+      }
+      
+      .back-to-home {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 600;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+      
+      .back-to-home:hover {
+        color: var(--secondary-color);
+      }
+      
+      .search-box {
+        max-width: 500px;
+        margin: 0 auto 40px;
+      }
+      
+      .search-box .form-control {
+        border-radius: 25px;
+        padding: 12px 20px;
+        border: 2px solid #e9ecef;
+        transition: all 0.3s ease;
+      }
+      
+      .search-box .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(108, 92, 231, 0.25);
+      }
+      
+      .category-badge {
+        background: var(--gradient);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-right: 10px;
+      }
+      
+      footer {
+        background: var(--dark-color);
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+        margin-top: 50px;
+      }
+      
+      .contact-card {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"><i class="fas fa-desktop me-2"></i>DCK AIO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="docs.html">Tài liệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="faq.html">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="container">
+        <h1>Câu Hỏi Thường Gặp</h1>
+        <p class="lead">Tìm câu trả lời cho những thắc mắc phổ biến về DCK AIO</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left me-2"></i>Quay lại trang chủ</a>
+      
+      <div class="search-box">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Tìm kiếm câu hỏi..." id="faqSearch">
+          <span class="input-group-text bg-transparent border-0 position-absolute end-0 top-50 translate-middle-y me-3">
+            <i class="fas fa-search text-muted"></i>
+          </span>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <section id="general" class="mb-5">
+            <h2 class="section-title">Câu Hỏi Chung</h2>
+            
+            <div class="accordion" id="generalAccordion">
+              <div class="card">
+                <div class="card-header collapsed" id="headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Chung</span>
+                    DCK AIO là gì?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#generalAccordion">
+                  <div class="card-body">
+                    <p>DCK AIO (Desktop Customize Kit All-In-One) là bộ công cụ toàn diện giúp bạn tùy chỉnh desktop Windows theo phong cách riêng. Bộ công cụ bao gồm 7 phần mềm miễn phí giúp thay đổi giao diện Windows từ thanh taskbar, hình nền, menu ngữ cảnh cho đến các widget trên desktop.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-header collapsed" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Chung</span>
+                    DCK AIO có miễn phí không?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#generalAccordion">
+                  <div class="card-body">
+                    <p>Có, tất cả phần mềm trong bộ DCK AIO đều hoàn toàn miễn phí. Một số phần mềm còn có mã nguồn mở, cho phép bạn tùy chỉnh hoặc đóng góp vào sự phát triển của chúng.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-header collapsed" id="headingThree" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Chung</span>
+                    DCK AIO có tương thích với phiên bản Windows nào?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#generalAccordion">
+                  <div class="card-body">
+                    <p>DCK AIO tương thích với Windows 10 và Windows 11. Một số phần mềm có thể hoạt động trên Windows 8.1, nhưng chúng tôi khuyến nghị sử dụng Windows 10 trở lên để có trải nghiệm tốt nhất.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-header collapsed" id="headingFour" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Chung</span>
+                    DCK AIO có ảnh hưởng đến hiệu suất hệ thống không?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#generalAccordion">
+                  <div class="card-body">
+                    <p>Các phần mềm trong DCK AIO được thiết kế để sử dụng ít tài nguyên hệ thống. Tuy nhiên, hiệu suất có thể thay đổi tùy thuộc vào cấu hình máy tính và số lượng phần mềm bạn sử dụng cùng lúc. Nếu bạn có máy tính cấu hình thấp, chúng tôi khuyên nên sử dụng từng phần mềm một thay vì tất cả cùng lúc.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section id="installation" class="mb-5">
+            <h2 class="section-title">Cài Đặt & Gỡ Bỏ</h2>
+            
+            <div class="accordion" id="installationAccordion">
+              <div class="card">
+                <div class="card-header collapsed" id="headingFive" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Cài đặt</span>
+                    Làm thế nào để cài đặt DCK AIO?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#installationAccordion">
+                  <div class="card-body">
+                    <p>Bạn có thể cài đặt DCK AIO theo hai cách:</p>
+                    <ol>
+                      <li><strong>Cài đặt từng phần mềm riêng lẻ:</strong> Truy cập trang chủ của từng phần mềm, tải về và cài đặt theo hướng dẫn.</li>
+                      <li><strong>Sử dụng bộ cài đặt tích hợp (sắp ra mắt):</strong> Tải về bộ cài DCK AIO và cài đặt tất cả phần mềm cùng lúc.</li>
+                    </ol>
+                    <p>Chi tiết hướng dẫn cài đặt có trong trang <a href="docs.html">Tài liệu</a>.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-header collapsed" id="headingSix" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Cài đặt</span>
+                    Tôi có cần phần mềm đặc biệt nào để chạy DCK AIO không?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#installationAccordion">
+                  <div class="card-body">
+                    <p>Hầu hết các phần mềm trong DCK AIO đều là portable hoặc có bộ cài đặt độc lập. Một số phần mềm có thể yêu cầu .NET Framework (thường đã có sẵn trên Windows 10/11). Bạn không cần cài đặt thêm phần mềm đặc biệt nào khác.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-header collapsed" id="headingSeven" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Gỡ bỏ</span>
+                    Làm thế nào để gỡ bỏ DCK AIO?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-bs-parent="#installationAccordion">
+                  <div class="card-body">
+                    <p>Để gỡ bỏ DCK AIO, bạn cần gỡ từng phần mềm riêng lẻ thông qua "Apps & features" trong Windows Settings hoặc sử dụng chức năng uninstall của từng phần mềm. Một số phần mềm portable có thể chỉ cần xóa thư mục chứa chúng.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section id="troubleshooting" class="mb-5">
+            <h2 class="section-title">Khắc Phục Sự Cố</h2>
+            
+            <div class="accordion" id="troubleshootingAccordion">
+              <div class="card">
+                <div class="card-header collapsed" id="headingEight" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Sự cố</span>
+                    Phần mềm không khởi động cùng Windows?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-bs-parent="#troubleshootingAccordion">
+                  <div class="card-body">
+                    <p>Nếu phần mềm không khởi động cùng Windows, hãy kiểm tra:</p>
+                    <ol>
+                      <li>Trong Settings của phần mềm, đảm bảo tùy chọn "Start with Windows" đã được bật.</li>
+                      <li>Kiểm tra Windows Task Manager &gt; Startup để xem phần mềm có trong danh sách không.</li>
+                      <li>Một số phần mềm cần chạy với quyền Administrator để có thể khởi động cùng hệ thống.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-header collapsed" id="headingNine" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Sự cố</span>
+                    TranslucentTB không làm trong suốt thanh taskbar?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-bs-parent="#troubleshootingAccordion">
+                  <div class="card-body">
+                    <p>Nếu TranslucentTB không hoạt động:</p>
+                    <ol>
+                      <li>Đảm bảo bạn đã chọn đúng chế độ trong suốt từ system tray.</li>
+                      <li>Khởi động lại TranslucentTB.</li>
+                      <li>Kiểm tra xem có phần mềm nào khác đang can thiệp vào thanh taskbar không.</li>
+                      <li>Thử chạy TranslucentTB với quyền Administrator.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-header collapsed" id="headingTen" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Sự cố</span>
+                    Rainmeter skins không hiển thị đúng?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-bs-parent="#troubleshootingAccordion">
+                  <div class="card-body">
+                    <p>Nếu Rainmeter skins không hiển thị đúng:</p>
+                    <ol>
+                      <li>Kiểm tra xem skin có tương thích với phiên bản Rainmeter bạn đang dùng không.</li>
+                      <li>Đảm bảo skin đã được load trong Rainmeter Manager.</li>
+                      <li>Một số skin cần cài đặt font chữ bổ sung - kiểm tra hướng dẫn đi kèm skin.</li>
+                      <li>Thử refresh skin hoặc khởi động lại Rainmeter.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-header collapsed" id="headingEleven" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Sự cố</span>
+                    Lively Wallpaper làm chậm máy tính?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-bs-parent="#troubleshootingAccordion">
+                  <div class="card-body">
+                    <p>Nếu Lively Wallpaper làm chậm máy tính:</p>
+                    <ol>
+                      <li>Thử sử dụng hình nền có độ phân giải thấp hơn.</li>
+                      <li>Trong Settings, bật tùy chọn "Pause when fullscreen" để tạm dừng khi chơi game hoặc xem phim.</li>
+                      <li>Đảm bảo driver đồ họa của bạn đã được cập nhật.</li>
+                      <li>Nếu sử dụng hình nền webpage, hãy chọn những trang nhẹ, ít yêu cầu tài nguyên.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section id="customization" class="mb-5">
+            <h2 class="section-title">Tùy Chỉnh Nâng Cao</h2>
+            
+            <div class="accordion" id="customizationAccordion">
+              <div class="card">
+                <div class="card-header collapsed" id="headingTwelve" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Tùy chỉnh</span>
+                    Làm thế nào để tạo skin Rainmeter của riêng tôi?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-bs-parent="#customizationAccordion">
+                  <div class="card-body">
+                    <p>Để tạo skin Rainmeter của riêng bạn:</p>
+                    <ol>
+                      <li>Tìm hiểu ngôn ngữ mã nguồn của Rainmeter từ tài liệu chính thức.</li>
+                      <li>Sử dụng text editor như Notepad++ hoặc Visual Studio Code.</li>
+                      <li>Bắt đầu với các skin đơn giản có sẵn và chỉnh sửa chúng.</li>
+                      <li>Tham gia cộng đồng Rainmeter để học hỏi kinh nghiệm từ người dùng khác.</li>
+                    </ol>
+                    <p>Chi tiết hướng dẫn có trong trang <a href="docs.html">Tài liệu</a>.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-header collapsed" id="headingThirteen" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                  <h5 class="mb-0">
+                    <span class="category-badge">Tùy chỉnh</span>
+                    Tôi có thể thêm lệnh tùy chỉnh vào Nilesoft Shell không?
+                    <i class="fas fa-chevron-down float-end"></i>
+                  </h5>
+                </div>
+                <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-bs-parent="#customizationAccordion">
+                  <div class="card-body">
+                    <p>Có, Nilesoft Shell cho phép bạn thêm lệnh tùy chỉnh vào menu ngữ cảnh:</p>
+                    <ol>
+                      <li>Mở Nilesoft Shell Settings.</li>
+                      <li>Chọn "Add new item" &gt; "Custom command".</li>
+                      <li>Nhập tên hiển thị và lệnh bạn muốn thực thi.</li>
+                      <li>Lưu cấu hình và áp dụng thay đổi.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <div class="contact-card text-center">
+            <h3>Không tìm thấy câu trả lời?</h3>
+            <p>Nếu bạn có câu hỏi khác không có trong danh sách này, hãy liên hệ với chúng tôi!</p>
+            <a href="mailto:loducanhhoctap@gmail.com" class="btn btn-primary mt-3">Liên hệ hỗ trợ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 DCK AIO - Desktop Customize Kit. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart text-danger"></i> for the customization community</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <script>
+      // Tìm kiếm FAQ
+      document.getElementById('faqSearch').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const cards = document.querySelectorAll('.card');
+        
+        cards.forEach(card => {
+          const cardText = card.textContent.toLowerCase();
+          if (cardText.includes(searchTerm)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+      
+      // Đánh dấu các mục đã mở trước đó
+      document.addEventListener('DOMContentLoaded', function() {
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        
+        accordionItems.forEach(item => {
+          item.addEventListener('show.bs.collapse', function() {
+            // Lưu trạng thái mở vào localStorage
+            const targetId = this.querySelector('.collapse').id;
+            localStorage.setItem(targetId, 'open');
+          });
+          
+          item.addEventListener('hide.bs.collapse', function() {
+            // Xóa trạng thái mở từ localStorage
+            const targetId = this.querySelector('.collapse').id;
+            localStorage.removeItem(targetId);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

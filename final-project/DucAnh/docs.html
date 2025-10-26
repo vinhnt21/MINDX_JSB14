@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DCK AIO - Tài Liệu Hướng Dẫn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      :root {
+        --primary-color: #6c5ce7;
+        --secondary-color: #a29bfe;
+        --dark-color: #2d3436;
+        --light-color: #f5f6fa;
+        --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      }
+      
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--dark-color);
+        background-color: var(--light-color);
+        line-height: 1.6;
+      }
+      
+      .navbar {
+        background: var(--gradient) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .navbar-brand, .nav-link {
+        color: white !important;
+        font-weight: 600;
+      }
+      
+      .nav-link:hover {
+        color: var(--light-color) !important;
+        text-decoration: underline;
+      }
+      
+      .hero-section {
+        background: var(--gradient);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      
+      .hero-section h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      
+      .section-title {
+        margin-bottom: 30px;
+        position: relative;
+        padding-bottom: 15px;
+      }
+      
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        height: 4px;
+        background: var(--gradient);
+        border-radius: 2px;
+      }
+      
+      .software-icon {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: var(--gradient);
+      }
+      
+      .software-icon img {
+        max-width: 40px;
+        max-height: 40px;
+      }
+      
+      .card {
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        border: none;
+      }
+      
+      .card-header {
+        background: var(--gradient);
+        color: white;
+        border-radius: 10px 10px 0 0 !important;
+        font-weight: 600;
+      }
+      
+      .step-number {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: var(--gradient);
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        margin-right: 10px;
+        font-weight: bold;
+      }
+      
+      .back-to-home {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 600;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+      
+      .back-to-home:hover {
+        color: var(--secondary-color);
+      }
+      
+      footer {
+        background: var(--dark-color);
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"><i class="fas fa-desktop me-2"></i>DCK AIO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="docs.html">Tài liệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="faq.html">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="container">
+        <h1>Tài Liệu Hướng Dẫn DCK AIO</h1>
+        <p class="lead">Hướng dẫn chi tiết cách cài đặt và sử dụng từng phần mềm trong bộ DCK</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left me-2"></i>Quay lại trang chủ</a>
+      
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="card">
+            <div class="card-header">Mục Lục</div>
+            <div class="card-body">
+              <div class="list-group list-group-flush">
+                <a href="#installation" class="list-group-item list-group-item-action">Cài đặt DCK</a>
+                <a href="#rainmeter" class="list-group-item list-group-item-action">Rainmeter</a>
+                <a href="#translucenttb" class="list-group-item list-group-item-action">TranslucentTB</a>
+                <a href="#lively" class="list-group-item list-group-item-action">Lively Wallpaper</a>
+                <a href="#nilesoft" class="list-group-item list-group-item-action">Nilesoft Shell</a>
+                <a href="#mydockfinder" class="list-group-item list-group-item-action">MyDockFinder</a>
+                <a href="#modernflyouts" class="list-group-item list-group-item-action">ModernFlyouts</a>
+                <a href="#explorerblurmica" class="list-group-item list-group-item-action">ExplorerBlurMica</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-9">
+          <section id="installation" class="mb-5">
+            <h2 class="section-title">Cài Đặt DCK AIO</h2>
+            <div class="card">
+              <div class="card-header">Hướng dẫn cài đặt toàn bộ bộ công cụ DCK</div>
+              <div class="card-body">
+                <h5>Cách 1: Cài đặt từng phần mềm riêng lẻ</h5>
+                <p><span class="step-number">1</span> Truy cập trang chủ của từng phần mềm bằng cách click vào card tương ứng trên trang chủ.</p>
+                <p><span class="step-number">2</span> Tải về phiên bản mới nhất của phần mềm.</p>
+                <p><span class="step-number">3</span> Chạy file cài đặt và làm theo hướng dẫn.</p>
+                <p><span class="step-number">4</span> Khởi động lại máy tính.</p>
+                
+                <h5 class="mt-4">Cách 2: Sử dụng gói cài đặt DCK AIO</h5>
+                <p><span class="step-number">1</span> Tải về gói file nén tại trang chủ của phần mềm.</p>
+                <p><span class="step-number">2</span> Giải nén file và chạy file cài đặt.</p>
+                <p><span class="step-number">1</span> Khởi động lại máy tính.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section id="rainmeter" class="mb-5">
+            <div class="d-flex align-items-center mb-3">
+              <div class="software-icon">
+                <img src="https://www.rainmeter.net/favicon.ico" alt="Rainmeter Logo">
+              </div>
+              <h2 class="section-title mb-0">Rainmeter</h2>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">Cách sử dụng Rainmeter</div>
+              <div class="card-body">
+                <h5>Cài đặt skins</h5>
+                <p><span class="step-number">1</span> Tải về skin từ các trang web như DeviantArt, Reddit hoặc từ cộng đồng Rainmeter.</p>
+                <p><span class="step-number">2</span> File skin thường có định dạng .rmskin.</p>
+                <p><span class="step-number">3</span> Double-click vào file .rmskin để cài đặt.</p>
+                <p><span class="step-number">4</span> Skin sẽ xuất hiện trên desktop của bạn.</p>
+                
+                <h5 class="mt-4">Tùy chỉnh skins</h5>
+                <p><span class="step-number">1</span> Click chuột phải vào skin và chọn "Settings" để thay đổi các tùy chọn.</p>
+                <p><span class="step-number">2</span> Kéo thả để di chuyển skin đến vị trí mong muốn.</p>
+                <p><span class="step-number">3</span> Sử dụng Rainmeter Manager để quản lý tất cả skins.</p>
+                
+                <h5 class="mt-4">Tạo skin tùy chỉnh</h5>
+                <p>Rainmeter sử dụng ngôn ngữ mã nguồn đơn giản để tạo skin. Bạn có thể học cách tạo skin từ tài liệu chính thức của Rainmeter.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section id="translucenttb" class="mb-5">
+            <div class="d-flex align-items-center mb-3">
+              <div class="software-icon">
+                <img src="https://store-images.s-microsoft.com/image/apps.58066.14207443949651364.14d58b87-611d-43f5-96e3-f7ac6427a4b6.58ce0f51-544a-4e90-88a8-f7a1e3e7c3e7?h=210" alt="TranslucentTB Logo">
+              </div>
+              <h2 class="section-title mb-0">TranslucentTB</h2>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">Cách sử dụng TranslucentTB</div>
+              <div class="card-body">
+                <h5>Cấu hình độ trong suốt</h5>
+                <p><span class="step-number">1</span> Click chuột phải vào biểu tượng TranslucentTB trong system tray.</p>
+                <p><span class="step-number">2</span> Chọn chế độ trong suốt mong muốn:</p>
+                <ul>
+                  <li><strong>Clear:</strong> Hoàn toàn trong suốt</li>
+                  <li><strong>Blur:</strong> Làm mờ</li>
+                  <li><strong>Normal:</strong> Trạng thái mặc định của Windows</li>
+                  <li><strong>Opaque:</strong> Không trong suốt</li>
+                </ul>
+                
+                <h5 class="mt-4">Tùy chỉnh nâng cao</h5>
+                <p><span class="step-number">1</span> Mở Settings từ menu system tray.</p>
+                <p><span class="step-number">2</span> Tại đây bạn có thể:</p>
+                <ul>
+                  <li>Thay đổi màu sắc taskbar</li>
+                  <li>Điều chỉnh độ trong suốt tùy chỉnh</li>
+                  <li>Thiết lập chế độ tự động cho các trạng thái khác nhau</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          
+          <section id="lively" class="mb-5">
+            <div class="d-flex align-items-center mb-3">
+              <div class="software-icon">
+                <img src="https://github.com/GHGH899/BackGround/blob/main/en-lively-wallpaper-logo-removebg-preview.png?raw=true" alt="Lively Wallpaper Logo">
+              </div>
+              <h2 class="section-title mb-0">Lively Wallpaper</h2>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">Cách sử dụng Lively Wallpaper</div>
+              <div class="card-body">
+                <h5>Thêm hình nền động</h5>
+                <p><span class="step-number">1</span> Mở ứng dụng Lively Wallpaper.</p>
+                <p><span class="step-number">2</span> Kéo thả file video, GIF hoặc trang web vào cửa sổ ứng dụng.</p>
+                <p><span class="step-number">3</span> Hoặc sử dụng thư viện hình nền có sẵn.</p>
+                
+                <h5 class="mt-4">Tùy chỉnh hình nền</h5>
+                <p><span class="step-number">1</span> Click chuột phải vào biểu tượng Lively trong system tray.</p>
+                <p><span class="step-number">2</span> Chọn "Wallpaper Customization" để điều chỉnh:</p>
+                <ul>
+                  <li>Âm lượng</li>
+                  <li>Tốc độ phát</li>
+                  <li>Hiệu ứng</li>
+                </ul>
+                
+                <h5 class="mt-4">Tiết kiệm pin</h5>
+                <p>Lively tự động tạm dừng hình nền khi bạn sử dụng pin hoặc khi có ứng dụng fullscreen.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section id="nilesoft" class="mb-5">
+            <div class="d-flex align-items-center mb-3">
+              <div class="software-icon">
+                <img src="https://nilesoft.org/images/logo.png" alt="Nilesoft Shell Logo">
+              </div>
+              <h2 class="section-title mb-0">Nilesoft Shell</h2>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">Cách sử dụng Nilesoft Shell</div>
+              <div class="card-body">
+                <h5>Tùy chỉnh menu ngữ cảnh</h5>
+                <p><span class="step-number">1</span> Mở Nilesoft Shell từ Start Menu.</p>
+                <p><span class="step-number">2</span> Sử dụng giao diện trực quan để thêm, xóa hoặc sắp xếp các mục trong menu ngữ cảnh.</p>
+                <p><span class="step-number">3</span> Bạn có thể thêm:</p>
+                <ul>
+                  <li>Ứng dụng thường dùng</li>
+                  <li>Công cụ hệ thống</li>
+                  <li>Lệnh tùy chỉnh</li>
+                </ul>
+                
+                <h5 class="mt-4">Tạo menu con</h5>
+                <p>Bạn có thể tạo menu con để tổ chức các mục một cách gọn gàng.</p>
+                
+                <h5 class="mt-4">Áp dụng thay đổi</h5>
+                <p>Sau khi tùy chỉnh, nhấn "Apply" để áp dụng thay đổi. Bạn có thể cần khởi động lại Explorer để thấy hiệu ứng.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section id="mydockfinder" class="mb-5">
+            <div class="d-flex align-items-center mb-3">
+              <div class="software-icon">
+                <img src="https://github.com/GHGH899/BackGround/blob/main/header-removebg-preview.png?raw=true" alt="MyDockFinder Logo">
+              </div>
+              <h2 class="section-title mb-0">MyDockFinder</h2>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">Cách sử dụng MyDockFinder</div>
+              <div class="card-body">
+                <h5>Thêm ứng dụng vào Dock</h5>
+                <p><span class="step-number">1</span> Kéo thả ứng dụng từ desktop hoặc Start Menu vào dock.</p>
+                <p><span class="step-number">2</span> Hoặc click chuột phải vào biểu tượng ứng dụng và chọn "Pin to Dock".</p>
+                
+                <h5 class="mt-4">Tùy chỉnh Dock</h5>
+                <p><span class="step-number">1</span> Click chuột phải vào khoảng trống trên dock và chọn "Dock Settings".</p>
+                <p><span class="step-number">2</span> Tại đây bạn có thể:</p>
+                <ul>
+                  <li>Thay đổi vị trí dock (trên, dưới, trái, phải)</li>
+                  <li>Điều chỉnh kích thước và độ trong suốt</li>
+                  <li>Bật/tắt hiệu ứng phóng to</li>
+                  <li>Tùy chỉnh khoảng cách giữa các biểu tượng</li>
+                </ul>
+                
+                <h5 class="mt-4">Ứng dụng đang chạy</h5>
+                <p>Các ứng dụng đang chạy sẽ hiển thị dấu chấm bên dưới biểu tượng trên dock.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section id="modernflyouts" class="mb-5">
+            <div class="d-flex align-items-center mb-3">
+              <div class="software-icon">
+                <img src="https://store-images.s-microsoft.com/image/apps.47375.13814320414813064.b31dac85-c111-4ce1-9701-e970023aa3ee.a679d8b1-1e92-4a64-a5f9-036841d3bfe2?h=115" alt="ModernFlyouts Logo">
+              </div>
+              <h2 class="section-title mb-0">ModernFlyouts</h2>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">Cách sử dụng ModernFlyouts</div>
+              <div class="card-body">
+                <h5>Tùy chỉnh Flyout</h5>
+                <p><span class="step-number">1</span> Mở ModernFlyouts từ Start Menu.</p>
+                <p><span class="step-number">2</span> Click vào biểu tượng ModernFlyouts trong system tray và chọn "Settings".</p>
+                <p><span class="step-number">3</span> Tại đây bạn có thể tùy chỉnh:</p>
+                <ul>
+                  <li>Vị trí hiển thị flyout</li>
+                  <li>Màu sắc và theme</li>
+                  <li>Kích thước flyout</li>
+                  <li>Bật/tắt các loại flyout (âm lượng, brightness, v.v.)</li>
+                </ul>
+                
+                <h5 class="mt-4">Sử dụng phím tắt</h5>
+                <p>ModernFlyouts tự động tích hợp với các phím tắt âm lượng và brightness của hệ thống.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section id="explorerblurmica" class="mb-5">
+            <div class="d-flex align-items-center mb-3">
+              <div class="software-icon">
+                <div class="software-icon">
+                    <i class="fa-regular fa-file fa-2x" style="color: white;"></i>
+                  </div>
+              </div>
+              <h2 class="section-title mb-0">ExplorerBlurMica</h2>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">Cách sử dụng ExplorerBlurMica</div>
+              <div class="card-body">
+                <h5>Kích hoạt hiệu ứng</h5>
+                <p><span class="step-number">1</span> Mở ExplorerBlurMica từ Start Menu.</p>
+                <p><span class="step-number">2</span> Ứng dụng sẽ tự động áp dụng hiệu ứng mờ/Mica lên File Explorer.</p>
+                
+                <h5 class="mt-4">Tùy chỉnh hiệu ứng</h5>
+                <p><span class="step-number">1</span> Click chuột phải vào biểu tượng ExplorerBlurMica trong system tray.</p>
+                <p><span class="step-number">2</span> Chọn "Settings" để điều chỉnh:</p>
+                <ul>
+                  <li>Loại hiệu ứng (Blur, Mica, Acrylic)</li>
+                  <li>Cường độ hiệu ứng</li>
+                  <li>Màu nền tùy chỉnh</li>
+                  <li>Áp dụng cho các ứng dụng khác ngoài Explorer</li>
+                </ul>
+                
+                <h5 class="mt-4">Khắc phục sự cố</h5>
+                <p>Nếu hiệu ứng không hoạt động, hãy thử khởi động lại Explorer hoặc khởi động lại máy tính.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 DCK AIO - Desktop Customize Kit. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart text-danger"></i> for the customization community</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DCK AIO - Desktop Customize Kit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      :root {
+        --primary-color: #6c5ce7;
+        --secondary-color: #a29bfe;
+        --dark-color: #2d3436;
+        --light-color: #f5f6fa;
+        --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      }
+      
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--dark-color);
+        background-color: var(--light-color);
+        line-height: 1.6;
+      }
+      
+      .navbar {
+        background: var(--gradient) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .navbar-brand, .nav-link {
+        color: white !important;
+        font-weight: 600;
+      }
+      
+      .nav-link:hover {
+        color: var(--light-color) !important;
+        text-decoration: underline;
+      }
+      
+      .hero-section {
+        background: var(--gradient);
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      
+      .hero-section h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      
+      .hero-section p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: 0 auto 30px;
+      }
+      
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+        position: relative;
+        padding-bottom: 15px;
+      }
+      
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--gradient);
+        border-radius: 2px;
+      }
+      
+      .software-card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 40px;
+        background: white;
+        height: 100%;
+        cursor: pointer;
+      }
+      
+      .software-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+      
+      .software-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        background: var(--gradient);
+        overflow: hidden;
+      }
+      
+      .software-icon img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      
+      .card-body {
+        padding: 25px;
+      }
+      
+      .feature-list {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      
+      .feature-list li {
+        padding: 8px 0;
+        position: relative;
+        padding-left: 30px;
+      }
+      
+      .feature-list li:before {
+        content: '\f058';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+      }
+      
+      .btn-primary {
+        background: var(--gradient);
+        border: none;
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+      }
+      
+      .download-section {
+        background-color: #f8f9fa;
+        padding: 80px 0;
+      }
+      
+      .docs-section {
+        padding: 80px 0;
+      }
+      
+      .contact-section {
+        padding: 80px 0;
+        background-color: #f8f9fa;
+      }
+      
+      footer {
+        background: var(--dark-color);
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+      }
+      
+      .social-icons a {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+      
+      .social-icons a:hover {
+        color: var(--secondary-color);
+      }
+      
+      .software-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+      
+      .software-link:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      @media (max-width: 768px) {
+        .hero-section h1 {
+          font-size: 2.5rem;
+        }
+        
+        .hero-section p {
+          font-size: 1.1rem;
+        }
+        
+        .software-card {
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#"><i class="fas fa-desktop me-2"></i>DCK AIO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#introduction">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#software">Phần mềm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Tính năng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#download">Tải về</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="docs.html">Tài liệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="introduction" class="hero-section">
+      <div class="container">
+        <h1>DCK | Desktop Customize Kit</h1>
+        <p class="lead">Bộ công cụ tùy chỉnh desktop toàn diện của bạn. Biến desktop Windows của bạn thành một trải nghiệm cá nhân hóa và đẹp mắt.</p>
+        <a href="#software" class="btn btn-light btn-lg">Khám phá ngay</a>
+      </div>
+    </section>
+
+    <section id="software" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Bộ Sưu Tập Phần Mềm</h2>
+        <div class="row">
+          <!-- Rainmeter -->
+          <div class="col-md-6 col-lg-4">
+            <a href="https://www.rainmeter.net/" target="_blank" class="software-link">
+              <div class="software-card">
+                <div class="card-body">
+                  <div class="software-icon">
+                    <img src="https://www.rainmeter.net/favicon.ico" alt="Rainmeter Logo">
+                  </div>
+                  <h5 class="card-title">Rainmeter</h5>
+                  <p class="card-text">Công cụ tùy biến desktop mạnh mẽ, cho phép bạn tạo và sử dụng các widget, skins để hiển thị thông tin hệ thống, thời tiết, tin tức và nhiều hơn nữa.</p>
+                  <ul class="feature-list">
+                    <li>Hàng ngàn skin miễn phí</li>
+                    <li>Tiêu thụ tài nguyên thấp</li>
+                    <li>Dễ dàng tùy chỉnh</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- TranslucentTB -->
+          <div class="col-md-6 col-lg-4">
+            <a href="https://github.com/TranslucentTB/TranslucentTB" target="_blank" class="software-link">
+              <div class="software-card">
+                <div class="card-body">
+                  <div class="software-icon">
+                    <img src="https://store-images.s-microsoft.com/image/apps.58066.14207443949651364.14d58b87-611d-43f5-96e3-f7ac6427a4b6.58ce0f51-544a-4e90-88a8-f7a1e3e7c3e7?h=210" alt="TranslucentTB Logo">
+                  </div>
+                  <h5 class="card-title">TranslucentTB</h5>
+                  <p class="card-text">Làm trong suốt thanh taskbar Windows, mang lại giao diện hiện đại và tinh tế. Tùy chỉnh độ trong suốt và hiệu ứng màu sắc.</p>
+                  <ul class="feature-list">
+                    <li>Làm trong suốt thanh taskbar</li>
+                    <li>Tiêu thụ RAM cực thấp</li>
+                    <li>Khởi động cùng Windows</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- Lively Wallpaper -->
+          <div class="col-md-6 col-lg-4">
+            <a href="https://www.rocksdanister.com/lively/" target="_blank" class="software-link">
+              <div class="software-card">
+                <div class="card-body">
+                  <div class="software-icon">
+                    <img src="https://github.com/GHGH899/BackGround/blob/main/en-lively-wallpaper-logo-removebg-preview.png?raw=true" alt="Lively Wallpaper Logo">
+                  </div>
+                  <h5 class="card-title">Lively Wallpaper</h5>
+                  <p class="card-text">Biến desktop của bạn thành một không gian sống động với hình nền động, video, trang web và ứng dụng. Hỗ trợ đa màn hình.</p>
+                  <ul class="feature-list">
+                    <li>Hình nền động & video</li>
+                    <li>Hỗ trợ webpage & ứng dụng</li>
+                    <li>Tiết kiệm pin thông minh</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- Nilesoft Shell -->
+          <div class="col-md-6 col-lg-4">
+            <a href="https://nilesoft.org/" target="_blank" class="software-link">
+              <div class="software-card">
+                <div class="card-body">
+                  <div class="software-icon">
+                    <img src="https://nilesoft.org/images/logo.png" alt="Nilesoft Shell Logo">
+                  </div>
+                  <h5 class="card-title">Nilesoft Shell</h5>
+                  <p class="card-text">Tùy chỉnh menu ngữ cảnh Windows (khi click chuột phải) với các tùy chọn mở rộng, thêm ứng dụng và công cụ thường dùng.</p>
+                  <ul class="feature-list">
+                    <li>Tùy biến menu ngữ cảnh</li>
+                    <li>Thêm công cụ hữu ích</li>
+                    <li>Giao diện hiện đại</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- MyDockFinder -->
+          <div class="col-md-6 col-lg-4">
+            <a href="https://www.mydockfinder.com/" target="_blank" class="software-link">
+              <div class="software-card">
+                <div class="card-body">
+                  <div class="software-icon">
+                    <img src="https://github.com/GHGH899/BackGround/blob/main/header-removebg-preview.png?raw=true" alt="MyDockFinder Logo">
+                  </div>
+                  <h5 class="card-title">MyDockFinder</h5>
+                  <p class="card-text">Mang trải nghiệm dock của macOS lên Windows. Thanh dock đẹp mắt với hiệu ứng phóng to khi di chuột và tích hợp nhiều tính năng.</p>
+                  <ul class="feature-list">
+                    <li>Giao diện giống macOS</li>
+                    <li>Hiệu ứng phóng to mượt mà</li>
+                    <li>Tiêu thụ tài nguyên thấp</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- ModernFlyouts -->
+          <div class="col-md-6 col-lg-4">
+            <a href="https://apps.microsoft.com/detail/9mt60qv066rp?launch=true&mode=full&hl=vi-vn&gl=vn&ocid=bingwebsearch" target="_blank" class="software-link">
+              <div class="software-card">
+                <div class="card-body">
+                  <div class="software-icon">
+                    <img src="https://store-images.s-microsoft.com/image/apps.47375.13814320414813064.b31dac85-c111-4ce1-9701-e970023aa3ee.a679d8b1-1e92-4a64-a5f9-036841d3bfe2?h=115" alt="ModernFlyouts Logo">
+                  </div>
+                  <h5 class="card-title">ModernFlyouts</h5>
+                  <p class="card-text">Thay thế flyout mặc định của Windows (âm lượng, brightness, etc.) bằng giao diện hiện đại, đẹp mắt và có thể tùy chỉnh.</p>
+                  <ul class="feature-list">
+                    <li>Flyout hiện đại</li>
+                    <li>Tùy chỉnh vị trí & giao diện</li>
+                    <li>Hỗ trợ phím tắt</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- ExplorerBlurMica -->
+          <div class="col-md-6 col-lg-4 mx-auto">
+            <a href="https://github.com/Maplespe/ExplorerBlurMica" target="_blank" class="software-link">
+              <div class="software-card">
+                <div class="card-body">
+                  <div class="software-icon">
+                    <i class="fa-regular fa-file fa-2x" style="color: white;"></i>
+                  </div>
+                  <h5 class="card-title">ExplorerBlurMica</h5>
+                  <p class="card-text">Áp dụng hiệu ứng mờ và hiệu ứng Mica (có trong Windows 11) lên File Explorer và các cửa sổ khác, mang lại giao diện đẹp mắt.</p>
+                  <ul class="feature-list">
+                    <li>Hiệu ứng mờ & Mica</li>
+                    <li>Tương thích Windows 10/11</li>
+                    <li>Dễ dàng kích hoạt</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Tính Năng Nổi Bật</h2>
+        <div class="row">
+          <div class="col-md-4 text-center mb-4">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-palette fa-3x text-primary"></i>
+            </div>
+            <h4>Tùy chỉnh đa dạng</h4>
+            <p>Hàng ngàn tùy chọn để cá nhân hóa desktop theo phong cách riêng của bạn.</p>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-bolt fa-3x text-primary"></i>
+            </div>
+            <h4>Nhẹ và nhanh</h4>
+            <p>Tất cả phần mềm được tối ưu để sử dụng ít tài nguyên hệ thống nhất có thể.</p>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-lock-open fa-3x text-primary"></i>
+            </div>
+            <h4>Miễn phí & Mã nguồn mở</h4>
+            <p>Tất cả phần mềm đều miễn phí và nhiều phần mềm có mã nguồn mở.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="download-section">
+      <div class="container">
+        <h2 class="section-title">Tải Về & Cài Đặt</h2>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h3>Bắt Đầu Tùy Chỉnh Desktop Của Bạn</h3>
+            <p>Tải về bộ công cụ DCK AIO hoặc chọn từng phần mềm riêng lẻ theo nhu cầu của bạn.</p>
+            <div class="mb-4">
+              <h5>Hướng dẫn cài đặt:</h5>
+              <ol>
+                <li>Tải về phần mềm từ liên kết bên dưới</li>
+                <li>Giải nén file</li>
+                <li>Chạy file cài đặt và làm theo hướng dẫn</li>
+                <li>Khởi động lại máy tính</li>
+                <li>Tận hưởng desktop mới của bạn!</li>
+              </ol>
+            </div>
+            <a href="https://drive.usercontent.google.com/download?id=1ERDJXuvp3QcQj27zJnqmwMUgHMV_pRoW&export=download&authuser=0&confirm=t&uuid=104f1498-2016-49b8-929a-edf950d3034b&at=AKSUxGM9wPgYNJ4F-Yfu4yGBI1D7:1760866393906" class="btn btn-primary me-3"><i class="fas fa-download me-2"></i>Tải DCK AIO Full</a>
+            <a href="#software" class="btn btn-outline-primary">Từng phần mềm riêng lẻ</a>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="https://cdn.discordapp.com/attachments/1113464156679573636/1424348188822868028/image.png?ex=68f56b5f&is=68f419df&hm=759736b8d3d0fa44917626e67e3ef3ee456b38c46afecc6a8f1366139d84ce10&" alt="Desktop Customization" class="img-fluid rounded shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="docs" class="docs-section">
+      <div class="container">
+        <h2 class="section-title">Tài Liệu & Hướng Dẫn</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center">
+                <i class="fas fa-book fa-2x text-primary mb-3"></i>
+                <h5 class="card-title">Tài liệu sử dụng</h5>
+                <p class="card-text">Hướng dẫn chi tiết cách sử dụng từng phần mềm trong bộ DCK.</p>
+                <a href="docs.html" class="btn btn-outline-primary">Xem tài liệu</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center">
+                <i class="fas fa-question-circle fa-2x text-primary mb-3"></i>
+                <h5 class="card-title">Câu hỏi thường gặp</h5>
+                <p class="card-text">Giải đáp các thắc mắc phổ biến khi sử dụng bộ công cụ DCK.</p>
+                <a href="faq.html" class="btn btn-outline-primary">Xem FAQ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Liên Hệ Với Chúng Tôi</h2>
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="card border-0 shadow">
+              <div class="card-body p-5">
+                <p class="text-center mb-4">Có câu hỏi hoặc cần hỗ trợ? Hãy liên hệ với chúng tôi!</p>
+                <div class="text-center">
+                  <p><i class="fas fa-envelope me-2"></i> loducanhhoctap@gmail.com</p>
+                  <p><i class="fas fa-globe me-2"></i> <a href="https://infinityheaven.carrd.co/">infinityheaven.carrd.co</a></p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 DCK AIO - Desktop Customize Kit. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart text-danger"></i> for the customization community</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

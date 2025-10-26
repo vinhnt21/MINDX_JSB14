@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu Hà Nội</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* ================== HIỆU ỨNG CSS ================== */
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #e8f5ff;
+        animation: fadeIn 1s ease-in;
+      }
+
+      /* MENU */
+      #menu {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: linear-gradient(90deg, #ff5f6d, #ffc371);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      #menu ul li {
+        transition: transform 0.3s, color 0.3s;
+        cursor: pointer;
+      }
+
+      #menu ul li:hover {
+        color: #ffe066;
+        transform: scale(1.1);
+      }
+
+      /* ẢNH VÀ KHUNG */
+      img {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      /* NÚT BẤM */
+      button {
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      }
+
+      /* HIỆU ỨNG XUẤT HIỆN */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* KHUNG CHỨA */
+      #content {
+        animation: fadeIn 1.2s ease-in-out;
+      }
+
+      /* FOOTER */
+      #footer {
+        background: linear-gradient(90deg, #fceabb, #f8b500);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- MENU -->
+    <div id="menu" class="text-white p-3">
+      <h1 class="text-center fw-bold">Giới thiệu Thủ đô Hà Nội</h1>
+      <ul class="d-flex justify-content-center gap-4 list-unstyled mt-3 fs-5">
+        <li><a href="Hà nội.html">Trang chủ</a></li>
+        <li><a href="Địa danh.html">Địa danh</a></li>
+        <li><a href="Ẩm thực.html"> Ẩm thực</a></li>
+        <li>
+          <a
+            href="https://dulichhanoi.vn/?utm_source=https%3A%2F%2Fwww.google.com%2F"
+            >Liên hệ</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+<div class="row text-center mt-5">
+  <div class="col-12">
+    <h3 class="text-primary fw-bold mb-3">Địa điểm du lịch nổi tiếng</h3>
+    <p class="fs-5">
+      Nếu bạn muốn khám phá Hà Nội, dưới đây là một số địa điểm đặc sắc dành cho
+      bạn khám phá:
+    </p>
+    <ul class="list-unstyled text-info-emphasis fs-5">
+      <li>
+        <strong>📍 Hồ Hoàn Kiếm:</strong> Quận Hoàn Kiếm, trung tâm Hà Nội
+      </li>
+      <li>
+        <strong>🏯 Văn Miếu - Quốc Tử Giám:</strong> Số 58 Quốc Tử Giám, Quận
+        Đống Đa
+      </li>
+      <li>
+        <strong>🌿 Lăng Chủ tịch Hồ Chí Minh:</strong> Số 2 Hùng Vương, Quận Ba
+        Đình
+      </li>
+      <li>
+        <strong>🛍️ Chợ Đồng Xuân:</strong> Quận Hoàn Kiếm, khu phố cổ Hà Nội
+      </li>
+    </ul>
+    ><img
+      src="https://grandworld.vinhomes.vn/wp-content/uploads/2024/01/ban-do-du-lich-ha-noi-11.png"
+      alt="Hình ảnh Hà Nội"
+      width="380"
+      class="rounded-4 shadow mb-4"
+    />
+  </div>
+</div>

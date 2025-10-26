@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu Hà Nội</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* ================== HIỆU ỨNG CSS ================== */
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #e8f5ff;
+        animation: fadeIn 1s ease-in;
+      }
+
+      /* MENU */
+      #menu {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: linear-gradient(90deg, #ff5f6d, #ffc371);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      #menu ul li {
+        transition: transform 0.3s, color 0.3s;
+        cursor: pointer;
+      }
+
+      #menu ul li:hover {
+        color: #ffe066;
+        transform: scale(1.1);
+      }
+
+      /* ẢNH VÀ KHUNG */
+      img {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      /* NÚT BẤM */
+      button {
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      }
+
+      /* HIỆU ỨNG XUẤT HIỆN */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* KHUNG CHỨA */
+      #content {
+        animation: fadeIn 1.2s ease-in-out;
+      }
+
+      /* FOOTER */
+      #footer {
+        background: linear-gradient(90deg, #fceabb, #f8b500);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- MENU -->
+    <div id="menu" class="text-white p-3">
+      <h1 class="text-center fw-bold">Giới thiệu Thủ đô Hà Nội</h1>
+      <ul class="d-flex justify-content-center gap-4 list-unstyled mt-3 fs-5">
+        <li><a href="Hà nội.html">Trang chủ</a></li>
+        <li><a href="Địa danh.html">Địa danh</a></li>
+        <li><a href="Ẩm thực.html"> Ẩm thực</a></li>
+        <li>
+          <a
+            href="https://dulichhanoi.vn/?utm_source=https%3A%2F%2Fwww.google.com%2F"
+            >Liên hệ</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+<!-- ẨM THỰC -->
+<div class="row text-center mt-5">
+  <div class="col-12">
+    <h2 class="text-success fw-bold mb-3">Ẩm thực Hà Nội</h2>
+    <p class="fs-5">
+      <li>
+        Ẩm thực Hà Nội là sự kết hợp tinh tế giữa hương vị truyền thống và phong
+        cách thanh nhã.
+      </li>
+      <li>
+        Mỗi món ăn đều mang trong mình câu chuyện về văn hóa và con người nơi
+        đây.
+      </li>
+    </p>
+    <ul class="list-unstyled text-info-emphasis fs-5">
+      <li>
+        🍜 <strong>Phở Hà Nội</strong> – Món ăn biểu tượng của Việt Nam - 13 P.
+        Lò Đúc, Ngô Thì Nhậm, Hai Bà Trưng, Hà Nội
+      </li>
+      <li>
+        🥢 <strong>Bún chả</strong> – Thịt nướng ăn cùng bún và rau sống - 1 P.
+        Hàng Mành, Hàng Gai, Hoàn Kiếm, Hà Nội
+      </li>
+      <li>
+        🥞 <strong>Bánh cuốn Thanh Trì</strong> – Mềm, thơm, tinh tế - 30 P.
+        Thanh Đàm, Thanh Trì, Hoàng Mai, Hà Nội
+      </li>
+      <li>
+        🐟 <strong>Chả cá Lã Vọng</strong> – Đậm đà hương vị truyền thống - 62
+        P. Nguyễn Hoàng, Mỹ Đình, Hanoi City, Hà Nội
+      </li>
+    </ul>
+    <img
+      src="https://sdmntpraustraliaeast.oaiusercontent.com/files/00000000-cdf4-61fa-a515-b668c071841b/raw?se=2025-10-05T08%3A59%3A58Z&sp=r&sv=2024-08-04&sr=b&scid=a898925a-1738-5462-854b-116fd46f501f&skoid=cb94e22a-e3df-4e6a-9e17-1696f40fa435&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-10-04T21%3A51%3A57Z&ske=2025-10-05T21%3A51%3A57Z&sks=b&skv=2024-08-04&sig=VGCky8cPundaTy96TPCwOqsitmNdmqxe72/1Zo58udM%3D"
+      alt="Ẩm thực Hà Nội"
+      width="360"
+      class="rounded-4 shadow mt-3"
+    />
+  </div>
+</div>

@@ -1,0 +1,62 @@
+:root{
+    --bg:#0b1220;
+    --card:#0f1724;
+    --muted:#98a8b9;
+    --accent:#f6c84c;
+    --white:#eef6ff;
+}
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    background:linear-gradient(180deg,#06101a 0%, #071826 100%);
+    color:var(--white);
+    -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px;}
+.site-header{border-bottom:1px solid rgba(255,255,255,0.04);padding:18px 0;}
+.logo{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.25rem}
+.main-nav{float:right}
+.main-nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+.main-nav a.active{color:var(--white);font-weight:600}
+
+.container{max-width:1100px;margin:28px auto;padding:0 18px}
+
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:20px}
+.hero h1{font-size:2rem;margin:0 0 6px;color:var(--accent)}
+.lead{color:var(--muted);margin:0 0 12px}
+.hero-img{width:100%;max-width:540px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
+.grid article{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,0.5)}
+.grid h2{margin-top:0;color:var(--accent)}
+
+.islands{margin-top:22px}
+.cards{display:flex;flex-wrap:wrap;gap:12px}
+.cards figure{width:calc(50% - 6px);background:var(--card);padding:8px;border-radius:8px;margin:0}
+.cards img{width:100%;height:150px;object-fit:cover;border-radius:6px}
+.cards figcaption{color:var(--muted);font-size:0.95rem;margin-top:6px}
+
+.timeline{margin-top:22px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:10px}
+.timeline ol{padding-left:20px;color:var(--muted)}
+
+.gallery{margin-top:22px}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.gallery-grid img{width:100%;height:120px;object-fit:cover;border-radius:6px;display:block}
+
+.caption{color:var(--muted);font-size:0.9rem;margin-top:8px}
+
+footer{border-top:1px solid rgba(255,255,255,0.04);padding:16px 0;margin-top:28px}
+footer p{color:var(--muted);margin:0}
+
+/* Responsive */
+@media (max-width:900px){
+    .grid{grid-template-columns:1fr}
+    .cards figure{width:100%}
+    .gallery-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:480px){
+    .hero{flex-direction:column}
+    .main-nav{float:none;margin-top:10px}
+    .main-nav a{margin-left:8px}
+}

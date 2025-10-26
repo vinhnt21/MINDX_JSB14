@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Project - Directory</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(
+          135deg,
+          #ff416c 0%,
+          #ff4b2b 25%,
+          #dc2430 50%,
+          #b91d73 75%,
+          #ff416c 100%
+        );
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        animation: fadeInUp 0.8s ease;
+      }
+
+      h1 {
+        text-align: center;
+        color: #dc2430;
+        margin-bottom: 10px;
+        font-size: 2.5em;
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      h1 i {
+        color: #ff416c;
+        margin-right: 15px;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 40px;
+        font-size: 1.1em;
+      }
+
+      .member-section {
+        margin-bottom: 35px;
+        padding: 25px;
+        background: #fff5f5;
+        border-radius: 10px;
+        border-left: 5px solid #ff416c;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeInUp 0.6s ease backwards;
+      }
+
+      .member-section:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .member-section:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .member-section:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .member-section:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .member-section:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      .member-section:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+      .member-section:nth-child(7) {
+        animation-delay: 0.7s;
+      }
+      .member-section:nth-child(8) {
+        animation-delay: 0.8s;
+      }
+      .member-section:nth-child(9) {
+        animation-delay: 0.9s;
+      }
+
+      .member-section:hover {
+        transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(255, 65, 108, 0.3);
+      }
+
+      .member-name {
+        font-size: 1.5em;
+        color: #dc2430;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .member-name::before {
+        content: "👤 ";
+        margin-right: 8px;
+      }
+
+      .file-list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 12px;
+      }
+
+      .file-list li a {
+        display: block;
+        padding: 12px 18px;
+        background: white;
+        color: #333;
+        text-decoration: none;
+        border-radius: 8px;
+        border: 2px solid #ffe0e6;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .file-list li a:hover {
+        background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+        color: white;
+        border-color: #ff416c;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(255, 65, 108, 0.4);
+      }
+
+      .file-list li a::before {
+        content: "📄 ";
+        margin-right: 8px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 2em;
+        }
+
+        .file-list {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="fas fa-folder-open"></i>Final Project Directory</h1>
+      <p class="subtitle">Danh sách tất cả các trang trong dự án</p>
+
+      <div class="member-section">
+        <div class="member-name">Dang</div>
+        <ul class="file-list">
+          <li><a href="Dang/main.html">Main Page</a></li>
+        </ul>
+      </div>
+
+      <div class="member-section">
+        <div class="member-name">DucAnh</div>
+        <ul class="file-list">
+          <li><a href="DucAnh/index.html">Index</a></li>
+          <li><a href="DucAnh/docs.html">Documentation</a></li>
+          <li><a href="DucAnh/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="member-section">
+        <div class="member-name">Dung</div>
+        <ul class="file-list">
+          <li><a href="Dung/index.html">Index</a></li>
+          <li><a href="Dung/gioithieu.html">Giới Thiệu</a></li>
+          <li><a href="Dung/iphone.html">iPhone</a></li>
+          <li><a href="Dung/iphone11.html">iPhone 11</a></li>
+          <li><a href="Dung/iphone14.html">iPhone 14</a></li>
+          <li><a href="Dung/iphone17.html">iPhone 17</a></li>
+          <li><a href="Dung/Samsung.html">Samsung</a></li>
+          <li><a href="Dung/Samsung1.html">Samsung 1</a></li>
+          <li><a href="Dung/Oppo.html">Oppo</a></li>
+          <li><a href="Dung/Oppo1.html">Oppo 1</a></li>
+        </ul>
+      </div>
+
+      <div class="member-section">
+        <div class="member-name">Duong</div>
+        <ul class="file-list">
+          <li><a href="Duong/index.html">Index</a></li>
+          <li><a href="Duong/hot-foods.html">Hot Foods</a></li>
+          <li><a href="Duong/hot-places.html">Hot Places</a></li>
+          <li><a href="Duong/kfc.html">KFC</a></li>
+          <li><a href="Duong/phobo.html">Phở Bò</a></li>
+        </ul>
+      </div>
+
+      <div class="member-section">
+        <div class="member-name">HongAnh</div>
+        <ul class="file-list">
+          <li><a href="HongAnh/index.html">Index</a></li>
+          <li><a href="HongAnh/gioithieu.html">Giới Thiệu</a></li>
+          <li><a href="HongAnh/thucdon.html">Thực Đơn</a></li>
+          <li><a href="HongAnh/lienhe.html">Liên Hệ</a></li>
+        </ul>
+      </div>
+
+      <div class="member-section">
+        <div class="member-name">Khai</div>
+        <ul class="file-list">
+          <li><a href="Khai/Địa danh.html">Địa Danh</a></li>
+          <li><a href="Khai/Hà nội.html">Hà Nội</a></li>
+          <li><a href="Khai/Ẩm thực.html">Ẩm Thực</a></li>
+        </ul>
+      </div>
+
+      <div class="member-section">
+        <div class="member-name">Nhung</div>
+        <ul class="file-list">
+          <li><a href="Nhung/home.html">Home</a></li>
+          <li><a href="Nhung/book genre.html">Book Genre</a></li>
+          <li><a href="Nhung/hot books.html">Hot Books</a></li>
+          <li><a href="Nhung/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="member-section">
+        <div class="member-name">Thao</div>
+        <ul class="file-list">
+          <li><a href="Thao/home.html">Home</a></li>
+          <li><a href="Thao/gioithieu.html">Giới Thiệu</a></li>
+          <li><a href="Thao/nhanvat.html">Nhân Vật</a></li>
+          <li><a href="Thao/tacgia.html">Tác Giả</a></li>
+          <li><a href="Thao/thegioi.html">Thế Giới</a></li>
+        </ul>
+      </div>
+
+      <div class="member-section">
+        <div class="member-name">TrungKien</div>
+        <ul class="file-list">
+          <li><a href="TrungKien/index.html">Index</a></li>
+          <li><a href="TrungKien/buoi4.html">Buổi 4</a></li>
+          <li><a href="TrungKien/checkpoint.html">Checkpoint</a></li>
+          <li><a href="TrungKien/product.html">Product</a></li>
+          <li><a href="TrungKien/sanpham1.html">Sản Phẩm 1</a></li>
+          <li><a href="TrungKien/sanpham2.html">Sản Phẩm 2</a></li>
+          <li><a href="TrungKien/sanpham3.html">Sản Phẩm 3</a></li>
+          <li><a href="TrungKien/sanpham4.html">Sản Phẩm 4</a></li>
+          <li><a href="TrungKien/sanpham5.html">Sản Phẩm 5</a></li>
+          <li><a href="TrungKien/sanpham6.html">Sản Phẩm 6</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+:root {
+  --jb-yellow: #f6c33b;
+  --jb-red: #e60012;
+}
+.banner {
+  position: relative;
+  background: linear-gradient(135deg, #fff 0%, #fff9e6 100%);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.banner-content {
+  max-width: 720px;
+}
+
+.banner h1 {
+  color: var(--jb-red);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4.5vw, 3.6rem);
+  margin-bottom: 0.6rem;
+}
+
+.banner p.lead {
+  color: #333;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  margin-bottom: 1.25rem;
+}
+/*Đặt ngay*/
+.btn-order {
+  background: var(--jb-yellow);
+  color: #1a1a1a;
+  border: none;
+  padding: 0.75rem 1.6rem;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.12);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.btn-order:active {
+  transform: translateY(3px);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Menu */
+.menu-card .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    min-height: 55vh;
+    padding: 3rem 1rem;
+  }
+}
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 75px;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.navbar-brand img {
+  height: 60px;
+  width: auto;
+}
+footer {
+  background-color: #dc3545;
+  color: white;
+}

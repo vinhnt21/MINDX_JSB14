@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Đổi màu nền trang */
+  display: flex; /* Sử dụng Flexbox để căn giữa */
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Phần Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Phần Main - Căn giữa bằng Flexbox */
+.main-content {
+  flex: 1; /* Đảm bảo main chiếm hết không gian còn lại */
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding: 2rem 0; /* Khoảng cách trên dưới cho nội dung chính */
+}
+
+/* Thẻ chứa sản phẩm */
+.product-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Hình ảnh sản phẩm */
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1.5rem; /* Khoảng cách dưới ảnh */
+}
+
+/* Mô tả sản phẩm */
+.product-description {
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+/* Danh sách đặc điểm */
+.product-card ul {
+  list-style: disc;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 2rem; /* Khoảng cách dưới danh sách */
+}

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KFC - Gà Rán Hẹn Gặp Vị Ngon</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --kfc-red:#e4002b;
+      --kfc-dark:#111;
+      --kfc-back:#9a1717;
+    }
+    .button-class {
+			background-color: #000000;
+			/* Green */
+			border: none;
+			color: rgb(176, 32, 32);padding: 10px 20px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;border-radius: 4px;
+		}
+    body{font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--kfc-dark);}
+    .navbar{background:linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(200,0,34,0.95));text-align: center;text-decoration: none;font-size: 16px;margin: 4px 2px;cursor: pointer;border-radius: 4px}
+    .navbar-brand{font-weight:700; color:#ff0000 !important;}
+    .hero{background:linear-gradient(0deg, rgb(209, 18, 18), rgba(231, 41, 41, 0.822)), scr ="4.jpg" center/cover no-repeat; color:#650000;}
+    .hero .container{padding:6rem 1rem;}
+    .chip{background:rgba(255,255,255,0.12); border-radius:999px; padding:0.35rem 0.9rem; display:inline-flex; align-items:center; gap:.5rem;}
+    .feature-icon{width:56px; height:56px; border-radius:12px; display:inline-grid; place-items:center; font-size:1.25rem;}
+    .card-img-top{height:180px; object-fit:cover;}
+    .menu-card:hover{transform:translateY(-6px); box-shadow:0 12px 30px rgba(234, 75, 75, 0.12);}
+    footer{background:#111; color:hsl(0, 50%, 75%); padding:2rem 0;}
+    @media (max-width:576px){ .hero .container{padding:3rem 1rem;} }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">KFC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-white" href="#about">Giới thiệu</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="signin.html">Đăng Nhập</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</head>
+#
+<body>
+	
+</body>
+
+  <!-- Hero -->
+  <header class="hero mb-5">
+    <div class="container text-center text-md-start">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <span class="chip mb-3">Món mới • Ưu đãi hôm nay</span>
+          <h1 class="display-5 fw-bold mt-3">Gà rán KFC — Vị giòn tan, hương vị đặc trưng</h1>
+          <p class="lead mt-3">Thưởng thức công thức gà rán nguyên bản với hơn 11 loại thảo mộc và gia vị. Phục vụ nhanh, giòn rụm, luôn nóng hổi.</p>
+          <div class="mt-4">
+            <a href="#menu" class="btn btn-light btn-lg me-2">Xem Menu</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg">Đặt hàng</a>
+          </div>
+        </div>
+        <div class="col-md-5 d-none d-md-block text-end">
+          <img src="download1.jpg" alt="KFC Chicken" class="img-fluid rounded-3 shadow-lg" style="max-height:5000px;">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <h2>Về KFC</h2>
+          <p>KFC (Kentucky Fried Chicken) là thương hiệu gà rán nổi tiếng toàn cầu, bắt nguồn từ công thức gia truyền sáng tạo bởi Colonel Sanders. Chúng tôi cam kết:</p>
+          <ul>
+            <li>Gà được tẩm ướp kỹ lưỡng, chiên giòn đúng chuẩn.</li>
+            <li>Nguyên liệu tươi, chế biến theo quy trình an toàn thực phẩm.</li>
+            <li>Dịch vụ nhanh chóng, thân thiện.</li>
+          </ul>
+          <a class="btn btn-danger mt-3" href="#menu">Khám phá thực đơn</a>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="card h-100 text-center p-3">
+                <div class="feature-icon bg-light">🍗</div>
+                <h5 class="mt-3">Giòn bên ngoài</h5>
+                <p class="small">Lớp bột chiên vàng ruộm, giòn rụm.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card h-100 text-center p-3">
+                <div class="feature-icon bg-light">🌿</div>
+                <h5 class="mt-3">Hương vị đặc trưng</h5>
+                <p class="small">Hơn 11 loại gia vị bí truyền.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card h-100 text-center p-3">
+                <div class="feature-icon bg-light">⚡</div>
+                <h5 class="mt-3">Phục vụ nhanh</h5>
+                <p class="small">Giao hàng hoặc nhận tại cửa hàng.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card h-100 text-center p-3">
+                <div class="feature-icon bg-light">💖</div>
+                <h5 class="mt-3">Thương hiệu toàn cầu</h5>
+                <p class="small">Hệ thống nhà hàng rộng khắp.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" class="py-5 bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Thực đơn nổi bật</h2>
+        <small class="text-muted">Cập nhật: hôm nay</small>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card menu-card h-100">
+            <img src="download.jpg"alt="Bucket gà"class="img-fluid rounded-3 shadow-lg" style="max-height:200px; max-width: 200px;">
+            <div class="card-body">
+              <h5 class="card-title">Bucket Gà Truyền Thống</h5>
+              <p class="card-text small">Một xô gà gồm miếng drumstick, thigh, và breast. Dùng cho gia đình.</p>
+              <a href="#contact" class="btn btn-danger">Đặt ngay</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card menu-card h-100">
+            <img src="2.jpg" class="card-img-top" class="img-fluid rounded-3 shadow-lg" style="max-height:200px; max-width: 200px;">
+            <div class="card-body">
+              <h5 class="card-title">Combo Gia Đình</h5>
+              <p class="card-text small">Combo gồm gà, khoai tây chiên và nước uống.</p>
+              <a href="#contact" class="btn btn-danger">Đặt ngay</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card menu-card h-100">
+            <img src="3.jpg" class="img-fluid rounded-3 shadow-lg" style="max-height:200px; max-width: 200px;">
+            <div class="card-body">
+              <h5 class="card-title">Cánh Gà Cay</h5>
+              <p class="card-text small">Cánh gà ướp cay, giòn tan, dành cho các fan vị cay.</p>
+              <a href="#contact" class="btn btn-danger">Đặt ngay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Order -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h3>Đặt hàng nhanh</h3>
+          <p>Điền thông tin để nhân viên gọi lại xác nhận đơn hàng.</p>
+          <form>
+            
+	            <a href="selling.html" class="button-class">
+                Mua Hàng</a>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <h5 class="text-white">KFC</h5>
+          <p class="small">© 2025 KFC. Hình ảnh minh họa.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="text-muted me-3" href="#">Chính sách</a>
+          <a class="text-muted" href="#">Liên hệ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
