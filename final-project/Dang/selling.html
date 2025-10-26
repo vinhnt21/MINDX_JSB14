@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC - Đặt Hàng Ngay</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #e4002b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .order-container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .logo {
+            margin-bottom: 30px;
+        }
+        
+        .logo h1 {
+            color: #e4002b;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        .info-section {
+            margin-bottom: 30px;
+        }
+        
+        .info-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            text-align: left;
+        }
+        
+        .info-item h3 {
+            color: #e4002b;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .info-item input, .info-item select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .info-item input:focus, .info-item select:focus {
+            outline: none;
+            border-color: #e4002b;
+        }
+        
+        .buy-button {
+            background-color: #e4002b;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .buy-button:hover {
+            background-color: #ff002b;
+            transform: scale(1.05);
+        }
+        
+        .note {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="order-container">
+        <div class="logo">
+            <h1>KENTUCKY FRIED CHICKEN</h1>
+        </div>
+        
+        <div class="info-section">
+            <div class="info-item">
+                <h3>Your Name</h3>
+                <input type="text" id="customerName" placeholder="Enter your name">
+            </div>
+            
+            <div class="info-item">
+                <h3>Food to Order</h3>
+                <select id="foodSelection">
+                    <option value="">Select your food</option>
+                    <option value="Gà Cổ Điển">Gà Nướng Cổ Điển - 30.000 đồng</option>
+                    <option value="Zinger Burger">Burger Zingger - 50.000 đồng</option>
+                    <option value="Gà Popcorn">Gà Popcorn - 40.000 đồng</option>
+                    <option value="Bucket Đùi Gà Truyền Thống">Bucket Đùi Gà Truyền Thống - 90.000 đồng</option>
+                    <option value="Bucket Cánh Gà Truyền Thống">Bucket Cánh Gà Truyền Thống - 80.000 đồng</option>
+                    <option value="COMBO Gia Đình">COMBO Gia Đình - 150.000 đồng</option>
+                </select>
+            </div>
+            
+            <div class="info-item">
+                <h3>Your Phone Number</h3>
+                <input type="tel" id="customerPhone" placeholder="Enter your phone number">
+            </div>
+            
+            <div class="info-item">
+                <h3>Your Address</h3>
+                <input type="text" id="customerAddress" placeholder="Enter your delivery address">
+            </div>
+        </div>
+        
+        <button class="buy-button" onclick="placeOrder()">ĐẶT HÀNG</button>
+        <p class="note">Fill in all details and click ORDER NOW to place your KFC order</p>
+    </div>
+
+    <script>
+        function placeOrder() {
+            const name = document.getElementById('customerName').value;
+            const food = document.getElementById('foodSelection').value;
+            const phone = document.getElementById('customerPhone').value;
+            const address = document.getElementById('customerAddress').value;
+            
+            if (!name || !food || !phone || !address) {
+                alert('Please fill in all your details before placing an order.');
+                return;
+            }
+            
+            alert(`Cảm Ơn ${name}!\n\n Bạn order "${food}" đã được kiểm duyệt và được gửi đến trong vài phút .\n\nChúng tôi sẽ giao hàng tới:\n${address}\n\nChúng tôi sẽ liên hệ : ${phone}`);
+            
+            // Reset form
+            document.getElementById('customerName').value = '';
+            document.getElementById('foodSelection').value = '';
+            document.getElementById('customerPhone').value = '';
+            document.getElementById('customerAddress').value = '';
+        }
+    </script>
+</body>
+</html>

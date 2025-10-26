@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC - Đăng Nhập</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #9f3d3d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23e31837"/><path d="M50,30 L60,50 L80,55 L65,70 L70,90 L50,80 L30,90 L35,70 L20,55 L40,50 Z" fill="white"/></svg>');
+            background-size: 200px;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1000px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .brand-section {
+            flex: 1;
+            background: linear-gradient(135deg, #e31837 0%, #a50000 100%);
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brand-section::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+        }
+
+        .brand-section h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .brand-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 300px;
+            line-height: 1.5;
+        }
+
+        .logo {
+            width: 180px;
+            margin-bottom: 25px;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        .form-section {
+            flex: 1;
+            background-color: white;
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-section h2 {
+            color: #e31837;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #e31837;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(227, 24, 55, 0.2);
+        }
+
+        .form-group input.valid {
+            border-color: #28a745;
+        }
+
+        .form-group input.invalid {
+            border-color: #e31837;
+        }
+
+        .password-requirements {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        .btn {
+            background: linear-gradient(to right, #e31837, #c41430);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #c41430, #a50000);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .links a {
+            color: #e31837;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .links a:hover {
+            color: #a50000;
+            text-decoration: underline;
+            background-color: rgba(227, 24, 55, 0.1);
+        }
+
+        .error-message {
+            color: #e31837;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            display: none;
+        }
+
+        .success-message {
+            color: #28a745;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            display: none;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .brand-section {
+                padding: 30px 20px;
+            }
+            
+            .form-section {
+                padding: 30px 25px;
+            }
+            
+            .links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #e31837;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="brand-section">
+            <!-- KFC Logo SVG -->
+            <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#e31837"/>
+                <text x="50" y="60" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="40">KFC</text>
+            </svg>
+            <h1>KFC Shop</h1>
+            <p>Sign in to order your favorite chicken meals and access exclusive deals!</p>
+        </div>
+        
+        <div class="form-section">
+            <h2>Sign In</h2>
+            <form id="signin-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <div class="error-message" id="email-error">Please enter a valid email address</div>
+                    <div class="success-message" id="email-success">Email looks good!</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <div class="error-message" id="password-error">Password must be at least 8 characters with one uppercase letter and one number</div>
+                    <div class="success-message" id="password-success">Password is strong!</div>
+                    <div class="password-requirements">
+                        Must be at least 8 characters with one uppercase letter and one number
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+                    <div class="error-message" id="confirm-password-error">Passwords do not match</div>
+                    <div class="success-message" id="confirm-password-success">Passwords match!</div>
+                </div>
+                
+                <button type="submit" class="btn">Sign In</button>
+                
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Signing you in...</p>
+                </div>
+                
+                <div class="links">
+                    <a href="#">Forgot Password?</a>
+                    <a href="#">Create Account</a>
+                </div>
+                
+                <div class="form-footer">
+                    By signing in, you agree to our Terms of Service and Privacy Policy
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signin-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            
+            let isValid = true;
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('email-error').style.display = 'block';
+                document.getElementById('email-success').style.display = 'none';
+                document.getElementById('email').classList.add('invalid');
+                document.getElementById('email').classList.remove('valid');
+                isValid = false;
+            } else {
+                document.getElementById('email-error').style.display = 'none';
+                document.getElementById('email-success').style.display = 'block';
+                document.getElementById('email').classList.add('valid');
+                document.getElementById('email').classList.remove('invalid');
+            }
+            
+            // Password validation
+            const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+            if (!passwordRegex.test(password)) {
+                document.getElementById('password-error').style.display = 'block';
+                document.getElementById('password-success').style.display = 'none';
+                document.getElementById('password').classList.add('invalid');
+                document.getElementById('password').classList.remove('valid');
+                isValid = false;
+            } else {
+                document.getElementById('password-error').style.display = 'none';
+                document.getElementById('password-success').style.display = 'block';
+                document.getElementById('password').classList.add('valid');
+                document.getElementById('password').classList.remove('invalid');
+            }
+            
+            // Confirm password validation
+            if (password !== confirmPassword) {
+                document.getElementById('confirm-password-error').style.display = 'block';
+                document.getElementById('confirm-password-success').style.display = 'none';
+                document.getElementById('confirm-password').classList.add('invalid');
+                document.getElementById('confirm-password').classList.remove('valid');
+                isValid = false;
+            } else {
+                document.getElementById('confirm-password-error').style.display = 'none';
+                document.getElementById('confirm-password-success').style.display = 'block';
+                document.getElementById('confirm-password').classList.add('valid');
+                document.getElementById('confirm-password').classList.remove('invalid');
+            }
+            
+            if (isValid) {
+                // Show loading animation
+                document.getElementById('loading').style.display = 'block';
+                
+                // Simulate API call delay
+                setTimeout(function() {
+                    // Redirect to the main shop page with hash
+                    window.location.href = 'http://127.0.0.1:5500/main.html#';
+                }, 1500);
+            }
+        });
+
+        // Real-time validation
+        document.getElementById('email').addEventListener('input', function() {
+            const email = this.value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (email === '') {
+                document.getElementById('email-error').style.display = 'none';
+                document.getElementById('email-success').style.display = 'none';
+                this.classList.remove('invalid', 'valid');
+            } else if (!emailRegex.test(email)) {
+                document.getElementById('email-error').style.display = 'block';
+                document.getElementById('email-success').style.display = 'none';
+                this.classList.add('invalid');
+                this.classList.remove('valid');
+            } else {
+                document.getElementById('email-error').style.display = 'none';
+                document.getElementById('email-success').style.display = 'block';
+                this.classList.add('valid');
+                this.classList.remove('invalid');
+            }
+        });
+
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+            
+            if (password === '') {
+                document.getElementById('password-error').style.display = 'none';
+                document.getElementById('password-success').style.display = 'none';
+                this.classList.remove('invalid', 'valid');
+            } else if (!passwordRegex.test(password)) {
+                document.getElementById('password-error').style.display = 'block';
+                document.getElementById('password-success').style.display = 'none';
+                this.classList.add('invalid');
+                this.classList.remove('valid');
+            } else {
+                document.getElementById('password-error').style.display = 'none';
+                document.getElementById('password-success').style.display = 'block';
+                this.classList.add('valid');
+                this.classList.remove('invalid');
+            }
+            
+            // Also validate confirm password when password changes
+            const confirmPassword = document.getElementById('confirm-password').value;
+            if (confirmPassword !== '') {
+                if (password !== confirmPassword) {
+                    document.getElementById('confirm-password-error').style.display = 'block';
+                    document.getElementById('confirm-password-success').style.display = 'none';
+                    document.getElementById('confirm-password').classList.add('invalid');
+                    document.getElementById('confirm-password').classList.remove('valid');
+                } else {
+                    document.getElementById('confirm-password-error').style.display = 'none';
+                    document.getElementById('confirm-password-success').style.display = 'block';
+                    document.getElementById('confirm-password').classList.add('valid');
+                    document.getElementById('confirm-password').classList.remove('invalid');
+                }
+            }
+        });
+
+        document.getElementById('confirm-password').addEventListener('input', function() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = this.value;
+            
+            if (confirmPassword === '') {
+                document.getElementById('confirm-password-error').style.display = 'none';
+                document.getElementById('confirm-password-success').style.display = 'none';
+                this.classList.remove('invalid', 'valid');
+            } else if (password !== confirmPassword) {
+                document.getElementById('confirm-password-error').style.display = 'block';
+                document.getElementById('confirm-password-success').style.display = 'none';
+                this.classList.add('invalid');
+                this.classList.remove('valid');
+            } else {
+                document.getElementById('confirm-password-error').style.display = 'none';
+                document.getElementById('confirm-password-success').style.display = 'block';
+                this.classList.add('valid');
+                this.classList.remove('invalid');
+            }
+        });
+    </script>
+</body>
+</html>
